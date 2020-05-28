@@ -1,0 +1,19 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.random-slide {
+  width: 100%;
+  height: 500px;
+  background: #a0d8ef;
+}
+
+.top-page {
+  background: image-url('soda.jpg');
+  height: 1000px;
+  background-size: cover;
+}
+
+.about {
+  display: flex;
+}
