@@ -17,13 +17,13 @@
 @import "bootstrap";
 
 //カラーの変数を定義
-$base-color: #e0ffef;
+$base-color: #a0d8ef;
 $main-color: #ffffe0;
-$sub-color: #eee;
+$sub-color: #c9caca;
 $danger-color: #e4007f;
 
 * {
-  color: #555;
+  color: #333;
 }
 
 header {
@@ -37,3 +37,4 @@ footer {
 body {
   background: $base-color;
 }
+
