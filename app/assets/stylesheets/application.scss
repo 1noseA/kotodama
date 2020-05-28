@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+
+//カラーの変数を定義
+$base-color: #e0ffef;
+$main-color: #ffffe0;
+$sub-color: #eee;
+$danger-color: #e4007f;
+
+* {
+  color: #555;
+}
+
+header {
+  background: $main-color;
+}
+
+footer {
+  background: $sub-color;
+}
+
+body {
+  background: $base-color;
+}
