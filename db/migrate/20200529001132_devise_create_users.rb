@@ -9,7 +9,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       ## Add column
       t.string :name,               null: false
-      t.string :image_id
+      t.string :image
       t.text :introduction
       
       ## Recoverable
