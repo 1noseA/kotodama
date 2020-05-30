@@ -3,9 +3,8 @@
     <h3>ユーザー一覧</h3>
   </div>
   <div class="row">
-
     <% @users.each do |user| %>
-      <% if user.status == 1%>
+      <% if user.released? %>
         <%= user.name %>
         <%= user.introduction %>
       <% end %>
