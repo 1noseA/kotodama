@@ -21,6 +21,19 @@ class UsersController < ApplicationController
     end
   end
 
+  # アカウント公開・非公開
+  def release
+    @user =  User.find(params[:user_id])
+    @user.released! unless @user.released?
+    redirect_to user_path(@user), notice: 'このアカウントを公開しました'
+  end
+
+  def nonrelease
+    @user =  User.find(params[:user_id])
+    @user.nonreleased! unless @user.nonreleased?
+    redirect_to user_path(@user), notice: 'このアカウントを非公開にしました'
+  end
+
   private
 
   def user_params
