@@ -1,18 +1,17 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update]
+
   def index
     @users = User.page(params[:page])
   end
   
   def show
-    @user = User.find(params[:id])
   end
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:id])
     if @user.update(user_params)
       redirect_to user_path(@user)
       flash[:success] = "プロフィール編集完了！"
@@ -38,5 +37,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:user, :image, :introduction, :status)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 end
