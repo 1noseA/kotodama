@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 my-5">
+    <h3>ユーザー一覧</h3>
+      <table class="table">
+        <% @users.each do |user| %>
+          <% if user.released? %>
+            <tr>
+              <td>
+                <% if user.image.present? %>
+                  <%= image_tag user.image.to_s, size: "100x100", class: "user-image" %>
+                <% else %>
+                  <%= image_tag "default.jpg", size: "100x100", class: "user-image" %>
+                <% end %>
+                <%= user.name %>
+                <%= user.introduction %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+
+      <%= paginate @users %>
+    </div>
+  </div>
+</div>

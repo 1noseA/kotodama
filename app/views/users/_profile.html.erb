@@ -1,0 +1,12 @@
+<div class="text-center pb-3">
+  <% if user.image.present? %>
+    <%= image_tag user.image.to_s, size: "100x100", class: "user-image" %>
+  <% else %>
+    <%= image_tag "default.jpg", size: "100x100", class: "user-image" %>
+  <% end %>
+</div>
+<p>名前<%= user.name %></p>
+<p>自己紹介<%= simple_format(user.introduction) %></p>
+<% if user == current_user %>
+  <%= link_to "編集する", edit_user_path(user), class: "btn btn-update" %>
+<% end %>
