@@ -21,3 +21,15 @@ ja:
         money: お金
         myself: 自分自身
         other: その他
+  activerecord:
+    models:
+      　post: 投稿
+    attributes:
+      post:
+        word: 言葉
+        source: 引用元
+        who: 人名
+        category: カテゴリー
+        episode: エピソード
+        genre: エピソードジャンル
+        status: 公開・非公開

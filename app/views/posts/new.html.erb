@@ -24,7 +24,7 @@
         <%= f.text_area :episode, class: "w-100", placeholder: "その言葉にまつわるエピソードがあれば教えてください" %><br>
 
         <%= f.label :genre %><br>
-        <%= f.select :genre, Post.genre.options, {include_blank: "--エピソードのジャンルを選択してください--"} %>
+        <%= f.select :genre, Post.genre.options, {include_blank: "--選択してください--"} %>
     </div>
   </div>
   <div class ="row">
