@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
   # アカウント公開・非公開
   enum status:{nonreleased: 0, released: 1}
+
+  # carrierwave関連付け
+  mount_uploader :image, ImagesUploader
 end
