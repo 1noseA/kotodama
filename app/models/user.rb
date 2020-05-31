@@ -9,4 +9,6 @@ class User < ApplicationRecord
 
   # carrierwave関連付け
   mount_uploader :image, ImagesUploader
+
+  has_many :posts, dependent: :destroy
 end
