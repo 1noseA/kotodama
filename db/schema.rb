@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_30_012638) do
+ActiveRecord::Schema.define(version: 2020_05_31_002102) do
+
+  create_table "posts", force: :cascade do |t|
+    t.text "word", null: false
+    t.string "source", null: false
+    t.string "who", null: false
+    t.string "category", null: false
+    t.text "episode"
+    t.string "genre"
+    t.integer "status", limit: 1, default: 1, null: false
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

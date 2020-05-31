@@ -8,5 +8,7 @@ class User < ApplicationRecord
   enum status:{nonreleased: 0, released: 1}
 
   # carrierwave関連付け
-  mount_uploader :image, ImagesUploader
+  # mount_uploader :image, ImagesUploader
+
+  has_many :posts, dependent: :destroy
 end
