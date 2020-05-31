@@ -4,8 +4,8 @@ class Post < ApplicationRecord
   extend Enumerize
 
   enumerize :category,
-    in: %i[quotations lyrics books comics movies science my someone other], multiple: true
+    in: %i[quotations lyrics books comics movies science my someone other]
 
   enumerize :genre,
-    in: %i[love family relationships work school health money myself other], multiple: true
+    in: %i[love family relationships work school health money myself other]
 end

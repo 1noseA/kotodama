@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   def index
+    @posts = Post.all
   end
 
   def show
@@ -11,6 +12,13 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post = Post.new(post_params)
+    @post.user_id = current_user.id
+    if @post.save!
+      redirect_to posts_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -20,5 +28,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:word, :source, :who, :category, :episode, :genre, :status, :user_id)
   end
 end
