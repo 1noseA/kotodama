@@ -1,0 +1,23 @@
+ja:
+  enumerize:
+    post: 
+      category:
+        quotations: 名言・格言
+        lyrics: 歌詞
+        books: 本
+        comics: 漫画・アニメ
+        movies: 映画・ドラマ
+        science: 科学
+        my: 私の言葉
+        someone: 誰かに言われた言葉
+        other: その他
+      genre:
+        love: 恋愛
+        family: 家族
+        relationships: 人間関係
+        work: 仕事
+        school: 学校
+        health: 健康
+        money: お金
+        myself: 自分自身
+        other: その他

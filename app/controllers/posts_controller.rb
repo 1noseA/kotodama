@@ -16,6 +16,7 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     if @post.save!
       redirect_to posts_path
+      flash[:success] = "投稿しました"
     else
       render :new
     end
