@@ -4,7 +4,7 @@
     <h3>ユーザー一覧</h3>
       <table class="table">
         <% @users.each do |user| %>
-          <% if user.released? %>
+          <% if user.released? || user == current_user %>
             <tr>
               <td>
                 <% if user.image.present? %>
