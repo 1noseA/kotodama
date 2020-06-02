@@ -23,7 +23,7 @@ ja:
         other: その他
   activerecord:
     models:
-      　post: 投稿
+      post: 投稿
     attributes:
       post:
         word: 言葉
