@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 p-5 mt-5 mx-auto bg-light rounded">
+      <p>言葉<br><%= @post.word %></p>
+      <p>引用元　　：　<%= @post.source %></p>
+      <p>人名　　　：　<%= @post.who %></p>
+      <p>カテゴリー：　<%= @post.category %></p>
+      <% if @post.user == current_user %>
+        <%= link_to "編集する", edit_post_path(current_user), class: "btn btn-update" %>
+        <%= link_to "削除する",post_path(@post),method: :delete, class: "btn btn-delete" %>
+      <% end %>
+    </div>
+    <div class="col-md-10 p-5 m-5 mx-auto bg-light rounded">
+      <p>エピソード<br><%= @post.episode %></p>
+      <p>ジャンル　：　<%= @post.genre %></p>
+      <% if @post.user == current_user %>
+        <%= link_to "編集する", edit_post_path(current_user), class: "btn btn-update" %>
+        <%= link_to "削除する",post_path(@post),method: :delete, class: "btn btn-delete" %>
+      <% end %>
+    </div>
+  </div>
+</div>
