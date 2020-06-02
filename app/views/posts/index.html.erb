@@ -12,9 +12,12 @@
            <th></th>
           </tr>
         <% @posts.each do |post| %>
-          <% if post.released? || post.user == current_user %>
+          <% if post.released? || post.user.released? || post.user == current_user %>
             <tr>
               <td>
+                <% unless post.released? %>
+                  <i class="fas fa-lock"></i>
+                <% end %>
                 <%= post.word %>
               </td>
               <td>
