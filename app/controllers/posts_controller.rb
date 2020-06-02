@@ -42,6 +42,19 @@ class PostsController < ApplicationController
     flash[:success] = "削除しました"
   end
 
+  # 投稿公開・非公開
+  def release
+    @post = Post.find(params[:post_id])
+    @post.released! unless @post.released?
+    redirect_to post_path(@post), notice: '投稿を公開しました'
+  end
+
+  def nonrelease
+    @post =  Post.find(params[:post_id])
+    @post.nonreleased! unless @post.nonreleased?
+    redirect_to post_path(@post), notice: '投稿を非公開にしました'
+  end
+
   private
 
   def post_params

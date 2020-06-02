@@ -25,6 +25,12 @@
 
         <%= f.label :genre %><br>
         <%= f.select :genre, Post.genre.options, {include_blank: "--選択してください--"} %>
+
+        <% if @post.released? %>
+          <%= link_to '非公開にする',post_nonrelease_path(@post), method: :patch %>
+        <% else %>
+          <%= link_to '公開する',post_release_path(@post), method: :patch %>
+        <% end %>
     </div>
   </div>
   <div class ="row">

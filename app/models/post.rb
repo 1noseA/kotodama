@@ -8,4 +8,7 @@ class Post < ApplicationRecord
 
   enumerize :genre,
     in: %i[love family relationships work school health money myself other]
+
+  # 投稿公開・非公開
+  enum status:{nonreleased: 0, released: 1}
 end
