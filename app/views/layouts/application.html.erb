@@ -11,6 +11,13 @@
 
   <body>
     <%= render 'layouts/header' %>
+      <% flash.each do |type, msg| %>
+        <% type = 'success' if type == 'notice' %>
+        <% type = 'error' if type == 'alert' %>
+        <script>
+          toastr['<%= type %>']('<%= msg %>');
+        </script>
+      <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>

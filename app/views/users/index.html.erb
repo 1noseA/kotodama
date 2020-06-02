@@ -4,13 +4,16 @@
     <h3>ユーザー一覧</h3>
       <table class="table">
         <% @users.each do |user| %>
-          <% if user.released? %>
+          <% if user.released? || user == current_user %>
             <tr>
               <td>
                 <% if user.image.present? %>
                   <%= image_tag user.image.to_s, size: "100x100", class: "user-image" %>
                 <% else %>
                   <%= image_tag "default.jpg", size: "100x100", class: "user-image" %>
+                <% end %>
+                <% unless user.released? %>
+                  <i class="fas fa-lock"></i>
                 <% end %>
                 <%= user.name %>
                 <%= user.introduction %>
