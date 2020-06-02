@@ -7,7 +7,7 @@
       <p>カテゴリー：　<%= @post.category %></p>
       <% if @post.user == current_user %>
         <%= link_to "編集する", edit_post_path(current_user), class: "btn btn-update" %>
-        <%= link_to "削除する",post_path(@post),method: :delete, class: "btn btn-delete" %>
+        <%= link_to "削除する",post_path(@post),method: :delete, class: "btn btn-delete", data: { confirm: "削除しますか?" } %>
       <% end %>
     </div>
     <div class="col-md-10 p-5 m-5 mx-auto bg-light rounded">
