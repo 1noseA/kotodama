@@ -21,18 +21,19 @@
 //カラーの変数を定義
 $base-color: #a0d8ef;
 $main-color: #ffffe0;
-$sub-color: #c9caca;
-$danger-color: #e4007f;
+$sub-color: #9caeb7;
+$btn-color: #2ca9e1;
+$danger-color: #ff3333;
 
 * {
-  color: #333;
+  color: #555;
 }
 
 header {
   background: $main-color;
 
   .nav-item {
-    color: #333;
+    color: #555;
     text-align: center;
     &:hover {
       opacity: 0.8;
@@ -50,4 +51,44 @@ body {
 
 .user-image{
   border-radius: 50%;
+}
+
+// ボタン
+.btn-add {
+  border:1px solid;
+  background: $btn-color;
+  color: #fff;
+  &:hover {
+      opacity: 0.8;
+      color: #fff;
+  }
+}
+
+.btn-update {
+  border:1px solid;
+  color: $btn-color;
+  &:hover {
+      background: $btn-color;
+      opacity: 0.8;
+      color: #fff;
+  }
+}
+
+.btn-delete {
+  border:1px solid;
+  color: $danger-color;
+  &:hover {
+      background: $danger-color;
+      opacity: 0.8;
+      color: #fff;
+  }
+}
+.btn-move {
+  border:1px solid;
+  background: #777;
+  color: #fff;
+  &:hover {
+      opacity: 0.8;
+      color: #fff;
+  }
 }
