@@ -15,9 +15,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    if @post.save
+    if @post.save!
       redirect_to posts_path
-      flash[:success] = "投稿しました"
+      flash[:notice] = "投稿しました"
     else
       render :new
     end
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     if @post.update(post_params)
       redirect_to post_path(current_user)
-      flash[:success] = "更新しました"
+      flash[:notice] = "更新しました"
     else
       render :edit
     end
