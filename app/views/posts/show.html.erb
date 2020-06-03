@@ -5,6 +5,10 @@
       <p>引用元　　：　<%= @post.source %></p>
       <p>人名　　　：　<%= @post.who %></p>
       <p>カテゴリー：　<%= @post.category %></p>
+
+      <%# SNSシェアボタン %>
+      <p><%= social_share_button_tag (@post.word) %></p>
+
       <% if @post.user == current_user %>
         <%= link_to "編集する", edit_post_path(@post), class: "btn btn-update" %>
         <%= link_to "削除する",post_path(@post),method: :delete, class: "btn btn-delete", data: { confirm: "削除しますか?" } %>
