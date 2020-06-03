@@ -29,7 +29,7 @@ class PostsController < ApplicationController
   def update
     @post.user_id = current_user.id
     if @post.update(post_params)
-      redirect_to post_path(current_user)
+      redirect_to post_path(@post)
       flash[:notice] = "更新しました"
     else
       render :edit
