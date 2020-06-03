@@ -27,13 +27,16 @@
       <%= f.label :genre %><br>
       <%= f.select :genre, Post.genre.options, {include_blank: "--選択してください--"} %>
 
-      <p><% if @post.released? %>
-        <%= link_to '非公開にする',post_nonrelease_path(@post), method: :patch %>
-      <% else %>
-        <%= link_to '公開する',post_release_path(@post), method: :patch %>
-      <% end %></p>
+      <%# <p><% if @post.released? %>
+        <%# <%= link_to '非公開にする',post_nonrelease_path(@post), method: :patch %>
+      <%# <% else %>
+        <%# <%= link_to '公開する',post_release_path(@post), method: :patch %> 
+      <%# <% end %>
+      <p></p>
+      <span><%= f.radio_button :status, :released, {checked: true} %> 公開する</span>
+      <span><%= f.radio_button :status, :nonreleased, {} %> 非公開にする</span>
     </div>
-  
+
     <div class="col-md-12 py-5 mb-5 text-center bg-light">
       <%= f.submit "更新する", class: "btn btn-add" %>
     </div>
