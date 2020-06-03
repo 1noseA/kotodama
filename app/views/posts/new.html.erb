@@ -4,33 +4,33 @@
     <h3 class="text-center">言葉を投稿する</h3>
     </div>
   </div>
+  <%= form_with model: @post, local: true do |f| %>
   <div class="row">
     <div class="col-md-6 px-5 bg-light">
-      <%= form_with model: @post do |f| %>
-        <span class="label p-1 mr-1 rounded">必須</span><%= f.label :word %><br>
-        <%= f.text_area :word, class: "w-100", placeholder: "あなたが救われた言葉を教えてください" %><br>
+      
+      <span class="label p-1 mr-1 rounded">必須</span><%= f.label :word %><br>
+      <%= f.text_area :word, class: "w-100", placeholder: "あなたが救われた言葉を教えてください" %><br>
 
-        <span class="label p-1 mr-1 rounded">必須</span><%= f.label :source %><br>
-        <%= f.text_field :source, class: "w-100", placeholder: "作品名など引用元を入力してください" %><br>
+      <span class="label p-1 mr-1 rounded">必須</span><%= f.label :source %><br>
+      <%= f.text_field :source, class: "w-100", placeholder: "作品名など引用元を入力してください" %><br>
 
-        <span class="label p-1 mr-1 rounded">必須</span><%= f.label :who %><br>
-        <%= f.text_field :who, class: "w-100", placeholder: "誰の言葉か教えてください" %><br>
+      <span class="label p-1 mr-1 rounded">必須</span><%= f.label :who %><br>
+      <%= f.text_field :who, class: "w-100", placeholder: "誰の言葉か教えてください" %><br>
 
-        <span class="label p-1 mr-1 rounded">必須</span><%= f.label :category %><br>
-        <%= f.select :category, Post.category.options, {include_blank: "--選択してください--"} %>
+      <span class="label p-1 mr-1 rounded">必須</span><%= f.label :category %><br>
+      <%= f.select :category, Post.category.options, {include_blank: "--選択してください--"} %>
     </div>
     <div class="col-md-6 px-5 bg-light">
-        <%= f.label :episode %><br>
-        <%= f.text_area :episode, class: "w-100", placeholder: "その言葉にまつわるエピソードがあれば教えてください" %><br>
+      <%= f.label :episode %><br>
+      <%= f.text_area :episode, class: "w-100", placeholder: "その言葉にまつわるエピソードがあれば教えてください" %><br>
 
-        <%= f.label :genre %><br>
-        <%= f.select :genre, Post.genre.options, {include_blank: "--選択してください--"} %>
+      <%= f.label :genre %><br>
+      <%= f.select :genre, Post.genre.options, {include_blank: "--選択してください--"} %>
     </div>
-  </div>
-  <div class ="row">
+  
     <div class="col-md-12 py-5 mb-5 text-center bg-light">
-        <%= f.submit "投稿する", class: "btn btn-add" %>
-      <% end %>
+      <%= f.submit "投稿する", class: "btn btn-add" %>
     </div>
+  <% end %>    
   </div>
 </div>
