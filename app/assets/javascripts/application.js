@@ -17,3 +17,19 @@
 //= require toastr
 //= require social-share-button
 //= require_tree .
+
+//画像プレビュー
+$(document).on('turbolinks:load', function() {
+  function readURL(input) {
+      if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+  $('#prev_img').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+      }
+  }
+  $("#post_img").change(function(){
+      readURL(this);
+  });
+});
