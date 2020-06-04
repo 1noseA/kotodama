@@ -49,5 +49,29 @@
         <%= link_to "削除する",post_path(@post),method: :delete, class: "btn btn-delete", data: { confirm: "削除しますか?" } %>
       <% end %>
     </div>
+
+    <%# コメント一覧 %>
+    <div class="col-md-10 mx-auto">
+      <p>コメント</p>
+        <% @post.comments.each do |comment| %>
+          <table class="table">
+            <tr>
+              <td>
+                <%= comment.user.name %></a>
+                <%= comment.created_at.strftime('%Y/%m/%d') %></span>
+                <%= comment.body %>
+              </td>
+            </tr>
+          <table>
+        <% end %>
+
+    <%# コメントフォーム %>
+      <div class="comment_form mb-4">
+        <%= form_for [@post, @comment] do |f| %>
+          <%= f.text_area :body, placeholder: "コメントをここに" %><br>
+            <%= f.submit "コメントする", class: "btn btn-add" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
