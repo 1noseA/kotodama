@@ -52,23 +52,23 @@
 
     <%# コメント一覧 %>
     <div class="col-md-10 mx-auto">
-      <p>コメント</p>
+      <p>コメント（全<%= @post.comments.count %>件）</p>
         <% @post.comments.each do |comment| %>
           <table class="table">
             <tr>
               <td>
                 <%= comment.user.name %></a>
                 <%= comment.created_at.strftime('%Y/%m/%d') %></span>
-                <%= comment.body %>
+                <%= simple_format(comment.body) %>
               </td>
             </tr>
-          <table>
+          </table>
         <% end %>
 
-    <%# コメントフォーム %>
-      <div class="comment_form mb-4">
+      <%# コメントフォーム %>
+      <div class="comment_form text-center my-4">
         <%= form_for [@post, @comment] do |f| %>
-          <%= f.text_area :body, placeholder: "コメントをここに" %><br>
+          <%= f.text_area :body, placeholder: "コメントをここに", class: "w-75" %><br>
             <%= f.submit "コメントする", class: "btn btn-add" %>
         <% end %>
       </div>
