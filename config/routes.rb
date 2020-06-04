@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :posts do
+    resource :favorites, only: [:create, :destroy]
     patch :nonrelease, :release
   end
 end

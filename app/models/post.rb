@@ -11,4 +11,9 @@ class Post < ApplicationRecord
 
   # 投稿公開・非公開
   enum status:{nonreleased: 0, released: 1}
+
+  has_many :favorites, dependent: :destroy
+  def favorited_by?(user)
+    favorites.where(user_id: user.id).exists?
+  end
 end

@@ -9,8 +9,23 @@
         <p>カテゴリー：　<%= @post.category %></p>
       </div>
 
+      <%# お気に入りボタン %>
+      <span>
+        <% if @post.favorited_by?(current_user) %>
+          <%= link_to post_favorites_path(@post), method: :delete do %>
+            <i class="fas fa-heart" aria-hidden="true" style="color: red;"></i>
+            <%= @post.favorites.count %>
+          <% end %>
+        <% else %>
+          <%= link_to post_favorites_path(@post), method: :post do %>
+            <i class="far fa-heart" aria-hidden="true"></i>
+            <%= @post.favorites.count %>
+          <% end %>
+        <% end %>
+      </span>
+
       <%# SNSシェアボタン %>
-      <p><%= social_share_button_tag (@post.word) %></p>
+      <span><%= social_share_button_tag (@post.word) %></span>
 
       <hr width="100%" align="center">
 
