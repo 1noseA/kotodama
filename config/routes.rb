@@ -12,4 +12,6 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy]
     patch :nonrelease, :release
   end
+
+  resources :notifications, only: :index
 end
