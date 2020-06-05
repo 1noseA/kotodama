@@ -10,9 +10,11 @@
       </div>
 
       <%# お気に入りボタン %>
-      <div id="favorites_buttons_<%= @post.id %>">
-        <%= render partial: 'favorites/favorite', locals: { post: @post} %>
-      </div>
+      <% if user_signed_in? %>
+        <div id="favorites_buttons_<%= @post.id %>">
+          <%= render partial: 'favorites/favorite', locals: { post: @post} %>
+        </div>
+      <% end %>
 
       <%# SNSシェアボタン %>
       <span><%= social_share_button_tag (@post.word) %></span>

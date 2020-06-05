@@ -96,6 +96,16 @@ body {
   }
 }
 
+.btn-search {
+  border:1px solid;
+  color: #555;
+  &:hover {
+      background: #555;
+      opacity: 0.8;
+      color: #fff;
+  }
+}
+
 body {
   display: flex; //フレックスボックスに有効に
   flex-flow: column; //要素を縦に並べる
