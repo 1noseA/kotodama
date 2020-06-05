@@ -12,7 +12,9 @@
       <td>
         <%= time_ago_in_words(comment.created_at) %>前<br>
         <%= simple_format(comment.body) %>
-        <%= link_to "削除する", post_comment_path(post, comment.id), method: :delete, remote: true, class: "btn btn-delete", data: {confirm: '本当に消しちゃっていいの?'} %>
+        <% if comment.user == current_user %>
+          <%= link_to "削除する", post_comment_path(post, comment.id), method: :delete, remote: true, class: "btn btn-delete", data: {confirm: '本当に消しちゃっていいの?'} %>
+        <% end %>
       </td>
     </tr>
   </table>
