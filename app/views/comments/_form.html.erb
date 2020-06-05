@@ -1,0 +1,4 @@
+<%= form_with(model: [post, @comment], url: post_comments_path(post, @comment)) do |f| %>
+  <%= f.text_area :body, placeholder: "コメントをここに", class: "w-75" %><br>
+    <%= f.submit "コメントする", class: "btn btn-add" %>
+<% end %>

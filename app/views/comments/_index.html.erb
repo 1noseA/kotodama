@@ -1,0 +1,21 @@
+<% post.comments.each do |comment| %>
+  <table class="table">
+    <tr>
+      <td class="w-25">
+        <% if post.user.image.present? %>
+          <%= image_tag post.user.image.to_s, size: "50x50", class: "user-image" %>
+        <% else %>
+          <%= image_tag "default.jpg", size: "50x50", class: "user-image" %>
+        <% end %><br>
+        <%= comment.user.name %>
+      </td>
+      <td>
+        <%= comment.created_at.strftime('%Y/%m/%d') %><br>
+        <%= simple_format(comment.body) %>
+      </td>
+      <td>
+        <%= link_to "削除する", post_comment_path(post, comment.id), method: :delete, remote: true, class: "btn btn-delete", data: {confirm: '本当に消しちゃっていいの?'} %>
+      </td>
+    </tr>
+  </table>
+<% end %>
