@@ -13,5 +13,9 @@ Rails.application.routes.draw do
     patch :nonrelease, :release
   end
 
-  resources :notifications, only: :index
+  resources :notifications, only: :index do
+    collection do
+      delete 'destroy_all'
+    end
+  end
 end
