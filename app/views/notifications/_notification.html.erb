@@ -1,13 +1,17 @@
 <% visitor = notification.visitor %>
 <% post = notification.post %>
 
-<div class="user-view clearfix ">
-  <%= link_to user_path(notification.visitor) do %>
-    <% if visitor.image.present? %>
-      <%= image_tag visitor.image.to_s, size: "50x50", class: "user-image" %>
-    <% else %>
-      <%= image_tag "default.jpg", size: "50x50", class: "user-image" %>
-    <% end %>
-  <% end %>
-  <%= notification_form(notification) %><span class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)}前)" %></span>
-</div>
+<table class="table">
+  <tr>
+    <td>
+      <%= link_to user_path(notification.visitor) do %>
+        <% if visitor.image.present? %>
+          <%= image_tag visitor.image.to_s, size: "50x50", class: "user-image" %>
+        <% else %>
+          <%= image_tag "default.jpg", size: "50x50", class: "user-image" %>
+        <% end %>
+      <% end %>
+      <%= notification_form(notification) %><span class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)}前)" %></span>
+    </td>
+  </tr>
+</table>

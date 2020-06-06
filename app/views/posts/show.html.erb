@@ -30,9 +30,9 @@
 
       <p class="my-4">投稿者
         <% if @post.user.image.present? %>
-          <%= image_tag @post.user.image.to_s, size: "100x100", class: "user-image" %>
+          <%= image_tag @post.user.image.to_s, size: "80x80", class: "user-image" %>
         <% else %>
-          <%= image_tag "default.jpg", size: "100x100", class: "user-image" %>
+          <%= image_tag "default.jpg", size: "80x80", class: "user-image" %>
         <% end %>
         <%= @post.user.name %>
       </p>
@@ -50,11 +50,10 @@
         </div>
 
       <%# コメントフォーム %>
-      <div class="comment_form text-center my-4">
+      <div class="comment_form text-center my-5">
         <% if user_signed_in? %>
           <div class="comment_form">
-            <h3 class="text-left">コメントを投稿する</h3>
-              <%= render partial: 'comments/form', locals: { post: @post } %>
+            <%= render partial: 'comments/form', locals: { post: @post } %>
           </div>
         <% end %>
       </div>
