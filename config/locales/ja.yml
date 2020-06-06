@@ -36,6 +36,7 @@ ja:
         episode: エピソード
         genre: エピソードジャンル
         status: 公開・非公開
+        user: ユーザ
         created_at: 作成日
         updated_at: 更新日
       user:
@@ -60,6 +61,9 @@ ja:
         post: 投稿
         comment: コメント
         action: 通知の種類
+        checked: 確認済み
+        created_at: 作成日
+        updated_at: 更新日
   views:
     pagination:
       first: <i class="fas fa-angle-double-left"></i>
