@@ -1,10 +1,10 @@
-<% visiter = notification.visiter %>
+<% visitor = notification.visitor %>
 <% post = notification.post %>
 
 <div class="user-view clearfix ">
-  <%= link_to user_path(notification.visiter) do %>
-    <% if visiter.image.present? %>
-      <%= image_tag visiter.image.to_s, size: "50x50", class: "user-image" %>
+  <%= link_to user_path(notification.visitor) do %>
+    <% if visitor.image.present? %>
+      <%= image_tag visitor.image.to_s, size: "50x50", class: "user-image" %>
     <% else %>
       <%= image_tag "default.jpg", size: "50x50", class: "user-image" %>
     <% end %>

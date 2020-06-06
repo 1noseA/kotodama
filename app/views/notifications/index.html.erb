@@ -4,7 +4,7 @@
     <%# <h7 style="color: black;">全削除</h7> %>
   <%# <% end %>
   <%# <hr> %>
-<% notifications = @notifications.where.not(visiter_id: current_user.id) %>
+<% notifications = @notifications.where.not(visitor_id: current_user.id) %>
 <% if notifications.exists? %>
   <div class="users-index">
     <%= render notifications %>
