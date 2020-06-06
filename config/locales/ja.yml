@@ -33,3 +33,10 @@ ja:
         episode: エピソード
         genre: エピソードジャンル
         status: 公開・非公開
+  views:
+    pagination:
+      first: <i class="fas fa-angle-double-left"></i>
+      last: <i class="fas fa-angle-double-right"></i>
+      previous: <i class="fas fa-angle-left"></i>
+      next: <i class="fas fa-angle-right"></i>
+      truncate: "..."
