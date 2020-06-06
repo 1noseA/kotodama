@@ -33,6 +33,8 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
+    # importを追加することにより、CSVインポートが可能となる
+    import
 
     ## With an audit adapter, you can add:
     # history_index
