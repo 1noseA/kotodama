@@ -8,10 +8,14 @@ Rails.application.routes.draw do
   end
 
   resources :posts do
-    resource :favorites, only: [:create, :destroy]
+    resources :favorites, only: [:index, :create, :destroy]
     resources :comments, only: [:create, :destroy]
     patch :nonrelease, :release
   end
 
-  resources :notifications, only: :index
+  resources :notifications, only: :index do
+    collection do
+      delete 'destroy_all'
+    end
+  end
 end

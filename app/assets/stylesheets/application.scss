@@ -114,3 +114,26 @@ body {
 main {
   flex: 1; //画面の高さから他の同レイヤーの要素の高さを引いた値に
 }
+
+//ページネーション
+.pagination{
+  .page-item{
+    .page-link{
+      border-radius: 50%;
+      color: #555;
+      margin: 2px;
+      &:hover{
+      background: #777;
+      color: #fff;
+      }
+    }
+  }
+  .active{
+    .page-link{
+      background: #777;
+      border-color: #fff;
+      border-radius: 50%;
+      color: #fff;
+    }  
+  }
+}

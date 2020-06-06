@@ -1,13 +1,17 @@
-<h3 class="text-center">通知</h3>
-  <%# <%= link_to notifications_path, method: :delete do %>
-    <%# <i class="fas fa-trash" style="color: black;"></i> %>
-    <%# <h7 style="color: black;">全削除</h7> %>
-  <%# <% end %>
-  <%# <hr> %>
-<% if @notifications.exists? %>
-  <div class="users-index">
-    <%= render @notifications %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 my-5 mx-auto">
+      <h3 class="text-center">通知</h3>
+        <%= link_to "全削除", destroy_all_notifications_path, method: :delete, class: "btn btn-delete mb-3" %>
+      <% notifications = @notifications.where.not(visitor_id: current_user.id) %>
+      <% if notifications.exists? %>
+        <div class="users-index">
+          <%= render notifications %>
+          <%= paginate notifications %>
+        </div>
+      <% else %>
+        <p>通知はありません</p>
+      <% end %>
+    </div>
   </div>
-<% else %>
-  <p>通知はありません</p>
-<% end %>
+</div>
