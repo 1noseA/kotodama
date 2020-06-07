@@ -2,6 +2,9 @@
   <div class="row">
     <div class="col-md-9 my-5">
       <h3><%= @user.name %>のページ</h3>
+      <% if @user.admin? %>
+        <%= link_to "管理画面へ行く", rails_admin_path, class: "btn btn-move" %>
+      <% end %>
     </div>
     <div class="col-md-3 p-4 my-5 bg-light rounded"> 
       <%= render 'profile', user: @user %>
