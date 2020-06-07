@@ -24,6 +24,9 @@ ja:
   activerecord:
     models:
       post: 投稿
+      comment: コメント
+      favorite: お気に入り
+      notification: 通知
     attributes:
       post:
         word: 言葉
@@ -33,6 +36,35 @@ ja:
         episode: エピソード
         genre: エピソードジャンル
         status: 公開・非公開
+        user: ユーザ
+        created_at: 作成日
+        updated_at: 更新日
+      user:
+        image: プロフィール画像
+        introduction: 自己紹介
+        status: 公開・非公開
+        admin: 管理
+        is_deleted: 退会済み
+      comment:
+        user: ユーザ
+        post: 投稿
+        body: 本文
+        created_at: 作成日
+        updated_at: 更新日
+      favorite: 
+        user: ユーザ
+        post: 投稿
+        created_at: 作成日
+        updated_at: 更新日
+      notification:
+        visitor: 通知した人
+        visited: 通知された人
+        post: 投稿
+        comment: コメント
+        action: 通知の種類
+        checked: 確認済み
+        created_at: 作成日
+        updated_at: 更新日
   views:
     pagination:
       first: <i class="fas fa-angle-double-left"></i>
@@ -40,3 +72,4 @@ ja:
       previous: <i class="fas fa-angle-left"></i>
       next: <i class="fas fa-angle-right"></i>
       truncate: "..."
+  

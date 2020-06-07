@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'homes#top'
 
   resources :users, only:[:index, :show, :edit, :update] do
     patch :nonrelease, :release
   end
+  put "/users/:id/hide" => "users#hide", as: 'users_hide'
 
   resources :posts do
     resources :favorites, only: [:index, :create, :destroy]

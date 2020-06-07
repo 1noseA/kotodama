@@ -20,6 +20,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def hide
+    @user = User.find(params[:id])
+    #is_deletedカラムにフラグを立てる(defaultはfalse)
+    @user.update(is_deleted: true)
+    #ログアウトさせる
+    reset_session
+    flash[:notice] = "ご利用ありがとうございました"
+    redirect_to root_path
+  end
+
   # アカウント公開・非公開
   def release
     @user =  User.find(params[:user_id])
