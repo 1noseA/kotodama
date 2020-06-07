@@ -44,6 +44,7 @@ ja:
         introduction: 自己紹介
         status: 公開・非公開
         admin: 管理
+        is_deleted: 退会済み
       comment:
         user: ユーザ
         post: 投稿
