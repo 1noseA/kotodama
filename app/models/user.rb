@@ -17,4 +17,9 @@ class User < ApplicationRecord
   # 自分が作った通知(active_notifications)と自分宛の通知(passive_notifications)の関連付け
   has_many :active_notifications, class_name: "Notification", foreign_key: "visitor_id", dependent: :destroy
   has_many :passive_notifications, class_name: "Notification", foreign_key: "visited_id", dependent: :destroy
+
+  # 退会済みユーザーをログインできなくする
+  def active_for_authentication?
+    super && (self.is_deleted == false)
+  end
 end
