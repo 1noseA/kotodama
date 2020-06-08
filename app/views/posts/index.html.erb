@@ -1,50 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12 my-5">
+    <div class="col-md-10 my-5">
     
     <h3>言葉一覧</h3>
     <%# 検索フォーム %>
-    <%= search_form_for @q do |f| %>
-      <%= f.search_field :word_or_source_or_who_cont, class: "form-control mr-2 w-25", placeholder: "単語や引用元で検索できます" %>
-      <%= f.submit "検索", class: "btn btn-search" %>
-    <% end %>
+    <%= render 'search_form' %>
     
     <%= link_to "投稿する", new_post_path, class: "btn btn-add float-right" %>
-      <table class="table">
-          <tr>
-           <th class="w-50">言葉</th>
-           <th>引用元</th>
-           <%# <th>人名</th> %>
-           <th>カテゴリー</th>
-           <th></th>
-          </tr>
-        <% @posts.each do |post| %>
-          <% if post.released? || post.user.released? || post.user == current_user %>
-            <tr>
-              <td>
-                <% unless post.released? %>
-                  <i class="fas fa-lock"></i>
-                <% end %>
-                <%= post.word %>
-              </td>
-              <td>
-                <%= post.source %>
-              </td>
-              <%# <td>
-                <%= post.who %>
-              <%# </td> %>
-              <td>
-                <%= post.category %>
-              </td>
-              <td>
-                <%= link_to "詳細", post_path(post), class: "btn btn-move" %>
-              </td>
-            </tr>
-          <% end %>
-        <% end %>
-      </table>
+      <%# 記事一覧 %>
+      <%= render 'post' %>
 
       <%= paginate @posts %>
+    </div>
+    <div class="col-md-2 my-5 bg-light rounded">
+      <%# カテゴリー一覧 %>
+      <%= render 'category' %>
     </div>
   </div>
 </div>

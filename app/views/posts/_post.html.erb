@@ -1,0 +1,33 @@
+<table class="table">
+  <tr>
+    <th class="w-50">言葉</th>
+    <th>引用元</th>
+    <%# <th>人名</th> %>
+    <th>カテゴリー</th>
+    <th></th>
+  </tr>
+  <% @posts.each do |post| %>
+    <% if post.released? || post.user.released? || post.user == current_user %>
+      <tr>
+        <td>
+          <% unless post.released? %>
+            <i class="fas fa-lock"></i>
+          <% end %>
+          <%= post.word %>
+        </td>
+        <td>
+          <%= post.source %>
+        </td>
+        <%# <td>
+          <%= post.who %>
+        <%# </td> %>
+        <td>
+          <%= post.category %>
+        </td>
+        <td>
+          <%= link_to "詳細", post_path(post), class: "btn btn-move" %>
+        </td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 my-5">
+      <%# 検索フォーム %>
+      <%= render 'posts/search_form' %>
+
+      <%# 記事一覧 %>
+      <%= render 'posts/post' %>
+    </div>
+    <div class="col-md-2 my-5 bg-light rounded">
+      <%# カテゴリー一覧 %>
+      <%= render 'posts/category', categories: @categories %>
+    </div>
+  </div>
+</div>

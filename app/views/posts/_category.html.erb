@@ -1,0 +1,10 @@
+<ul>
+  <li>
+    <%= link_to "すべて", posts_path %>
+  </li>
+  <% @categories.each do |category| %>
+    <li>
+      <%= link_to t("enumerize.post.category.#{category}"),  category_path(category) %>
+    </li>
+  <% end %>
+</ul>
