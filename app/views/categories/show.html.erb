@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-12 mt-5">
       <%# 検索フォーム %>
-      <%= render 'search_form' %>
+      <%= render 'posts/search_form' %>
     </div>
   </div>
 
@@ -12,14 +12,14 @@
       <%= link_to "投稿する", new_post_path, class: "btn btn-add float-right" %>
 
       <%# 記事一覧 %>
-      <%= render 'post' %>
+      <%= render 'posts/post' %>
 
       <%= paginate @posts %>
     </div>
-
+    
     <div class="col-md-2 my-5">
       <%# カテゴリー一覧 %>
-      <%= render 'category' %>
+      <%= render 'posts/category', categories: @categories %>
     </div>
   </div>
 </div>

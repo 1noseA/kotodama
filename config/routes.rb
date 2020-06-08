@@ -17,6 +17,9 @@ Rails.application.routes.draw do
     patch :nonrelease, :release
   end
 
+  resources :categories, only: :show
+  get 'search', to: 'posts#search'
+
   resources :notifications, only: :index do
     collection do
       delete 'destroy_all'
