@@ -4,13 +4,8 @@
       <%# 検索フォーム %>
       <%= render 'search_form' %>
       <%= link_to "投稿する", new_post_path, class: "btn btn-add float-right" %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-10 mb-5">
-
       <%# タブ %>
+    
       <ul class="nav nav-tabs">
         <li class="nav-item">
           <a href="#word" class="nav-link active" data-toggle="tab">言葉</a>
@@ -19,23 +14,37 @@
           <a href="#episode" class="nav-link" data-toggle="tab">エピソード</a>
         </li>
       </ul>
+    </div>
+  </div> 
       
-      <%# パネル部分 %>
-      <div class="tab-content mt-3">
-        <div id="word" class="tab-pane active">
+  <%# パネル部分 %>
+    <div class="tab-content mt-3">
+      <div id="word" class="tab-pane active">
+      <div class="row">
+        <div class="col-md-10">
           <%= render 'post' %>
           <%= paginate @posts %>
         </div>
-        <div id="episode" class="tab-pane">
+        <div class="col-md-2 mb-5">
+          <%# カテゴリー一覧 %>
+          <%= render 'category' %>
+        </div>
+      </div>
+      </div>
+      
+      <div id="episode" class="tab-pane">
+      <div class="row">
+        <div class="col-md-10">
           <%= render 'episode' %>
           <%= paginate @posts %>
         </div>
+        <div class="col-md-2 mb-5">
+          <%# カテゴリー一覧 %>
+          <%= render 'category' %>
+        </div>
+      </div>
       </div>
     </div>
 
-    <div class="col-md-2 my-5">
-      <%# カテゴリー一覧 %>
-      <%= render 'category' %>
-    </div>
   </div>
 </div>
