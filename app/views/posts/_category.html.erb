@@ -1,6 +1,6 @@
 <div class="list-group">
   <%= link_to "全カテゴリー", posts_path, class: "list-group-item text-decoration-none" %>
   <% @categories.each do |category| %>
-    <%= link_to t("enumerize.post.category.#{category}"),  category_path(category),class: "list-group-item text-decoration-none" %>
+    <%= link_to t("enumerize.post.category.#{category}"), category_path(category), class: "list-group-item text-decoration-none" %>
   <% end %>
 </div>

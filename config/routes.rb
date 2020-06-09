@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   end
 
   resources :categories, only: :show
+  resources :genres, only: :show
   get 'search', to: 'posts#search'
 
   resources :notifications, only: :index do

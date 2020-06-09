@@ -1,0 +1,6 @@
+<div class="list-group">
+  <%= link_to "全ジャンル", posts_path, class: "list-group-item text-decoration-none" %>
+  <% @genres.each do |genre| %>
+    <%= link_to t("enumerize.post.genre.#{genre}"), genre_path(genre), class: "list-group-item text-decoration-none" %>
+  <% end %>
+</div>
