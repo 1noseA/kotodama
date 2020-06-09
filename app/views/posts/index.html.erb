@@ -11,23 +11,23 @@
     <div class="col-md-10 mb-5">
 
       <%# タブ %>
-      <ul id="myTab" class="nav nav-tabs" role="tablist">
-        <li class="nav-item" role="presentation">
-          <a href="#word" id="word-tab" class="nav-link active" role="tab" data-toggle="tab" aria-controls="word" aria-selected="true">言葉</a>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a href="#word" class="nav-link active" data-toggle="tab">言葉</a>
         </li>
-        <li class="nav-item" role="presentation">
-          <a href="#episode" id="episode-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="episode" aria-selected="false">エピソード</a>
+        <li class="nav-item">
+          <a href="#episode" class="nav-link" data-toggle="tab">エピソード</a>
         </li>
       </ul>
       
       <%# パネル部分 %>
-      <div id="myTabContent" class="tab-content mt-3">
-        <div id="word" class="tab-pane active" role="tabpanel" aria-labelledby="word-tab">
+      <div class="tab-content mt-3">
+        <div id="word" class="tab-pane active">
           <%= render 'post' %>
           <%= paginate @posts %>
         </div>
-        <div id="episode" class="tab-pane" role="tabpanel" aria-labelledby="episode-tab">
-          あああ
+        <div id="episode" class="tab-pane">
+          <p>あああ</p>
         </div>
       </div>
     </div>

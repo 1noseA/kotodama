@@ -14,6 +14,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require popper
+//= require bootstrap-sprockets
 //= require toastr
 //= require social-share-button
 //= require_tree .
@@ -33,9 +35,3 @@ $(document).on('turbolinks:load', function() {
       readURL(this);
   });
 });
-
-// タブ
-$('#myTab a').on('click',function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
