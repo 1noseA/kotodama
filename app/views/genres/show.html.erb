@@ -8,10 +8,10 @@
     
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a href="#word" class="nav-link active" data-toggle="tab">言葉</a>
+          <a href="#word" class="nav-link" data-toggle="tab">言葉</a>
         </li>
         <li class="nav-item">
-          <a href="#episode" class="nav-link" data-toggle="tab">エピソード</a>
+          <a href="#episode" class="nav-link active" data-toggle="tab">エピソード</a>
         </li>
       </ul>
     </div>
@@ -19,7 +19,7 @@
       
   <%# パネル部分 %>
     <div class="tab-content mt-3">
-      <div id="word" class="tab-pane active">
+      <div id="word" class="tab-pane">
       <div class="row">
         <div class="col-md-10">
           <%= render 'posts/post' %>
@@ -32,7 +32,7 @@
       </div>
       </div>
       
-      <div id="episode" class="tab-pane">
+      <div id="episode" class="tab-pane active">
       <div class="row">
         <div class="col-md-10">
           <%= render 'posts/episode' %>
