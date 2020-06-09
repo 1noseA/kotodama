@@ -3,18 +3,33 @@
     <div class="col-md-12 mt-5">
       <%# 検索フォーム %>
       <%= render 'search_form' %>
+      <%= link_to "投稿する", new_post_path, class: "btn btn-add float-right" %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-10 mb-5">
-      <span class="word-header">言葉一覧</span>
-      <%= link_to "投稿する", new_post_path, class: "btn btn-add float-right" %>
 
-      <%# 記事一覧 %>
-      <%= render 'post' %>
-
-      <%= paginate @posts %>
+      <%# タブ %>
+      <ul id="myTab" class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a href="#word" id="word-tab" class="nav-link active" role="tab" data-toggle="tab" aria-controls="word" aria-selected="true">言葉</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a href="#episode" id="episode-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="episode" aria-selected="false">エピソード</a>
+        </li>
+      </ul>
+      
+      <%# パネル部分 %>
+      <div id="myTabContent" class="tab-content mt-3">
+        <div id="word" class="tab-pane active" role="tabpanel" aria-labelledby="word-tab">
+          <%= render 'post' %>
+          <%= paginate @posts %>
+        </div>
+        <div id="episode" class="tab-pane" role="tabpanel" aria-labelledby="episode-tab">
+          あああ
+        </div>
+      </div>
     </div>
 
     <div class="col-md-2 my-5">
