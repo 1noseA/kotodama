@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'homes#top'
+  get '/info' => 'homes#info'
+  get '/privacy' => 'homes#privacy'
 
   resources :users, only:[:index, :show, :edit, :update] do
     patch :nonrelease, :release
@@ -18,6 +20,7 @@ Rails.application.routes.draw do
   end
 
   resources :categories, only: :show
+  resources :genres, only: :show
   get 'search', to: 'posts#search'
 
   resources :notifications, only: :index do
