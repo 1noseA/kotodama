@@ -33,6 +33,7 @@ ja:
         source: 引用元
         who: 人名
         category: カテゴリー
+        title: タイトル
         episode: エピソード
         genre: エピソードジャンル
         status: 公開・非公開
