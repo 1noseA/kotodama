@@ -62,4 +62,16 @@ class Post < ApplicationRecord
     end
     notification.save if notification.valid?
   end
+
+  # ソート
+  ransacker :favorites_count do
+    query = '(SELECT COUNT(favorites.post_id) FROM favorites WHERE favorites.post_id = posts.id GROUP BY favorites.post_id)'
+    Arel.sql(query)
+  end
+
+  ransacker :comments_count do
+    query = '(SELECT COUNT(comments.post_id) FROM comments WHERE comments.post_id = posts.id GROUP BY comments.post_id)'
+    Arel.sql(query)
+  end
+  
 end

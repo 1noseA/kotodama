@@ -7,6 +7,7 @@ class PostsController < ApplicationController
     @categories = Post.category.values
     @genres = Post.genre.values
     @posts = @q.result(distinct: true).page(params[:page])
+    params[:q] = { sorts: 'id desc' }
   end
 
   def search
