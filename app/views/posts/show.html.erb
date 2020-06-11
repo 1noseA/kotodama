@@ -21,10 +21,11 @@
 
       <hr width="100%" align="center">
 
-      <p class="my-4">
-        エピソード<br><%= @post.episode %><br>
-        ジャンル　：　<%= @post.genre %>
-      </p>
+      <div class="my-4">
+        <p>タイトル　：　<%= @post.title %></p>
+        <p>エピソード<br><%= @post.episode %></p>
+        <p>ジャンル　：　<%= @post.genre %></p>
+      </div>
 
       <hr width="100%" align="center">
 
@@ -44,10 +45,9 @@
 
     <%# コメント一覧 %>
     <div class="col-md-10 mx-auto">
-      <p>コメント（全<%= @post.comments.count %>件）</p>
-        <div id="comment_<%= @post.id %>">
-          <%= render partial: 'comments/index', locals: { post: @post } %>
-        </div>
+      <div id="comment_<%= @post.id %>">
+        <%= render partial: 'comments/index', locals: { post: @post } %>
+      </div>
 
       <%# コメントフォーム %>
       <div class="comment_form text-center my-5">

@@ -4,6 +4,7 @@ class CategoriesController < ApplicationController
     @categories = Post.category.values
     @genres = Post.genre.values
     # 検索
+    params[:q] = { sorts: 'id desc' }
     @q = Post.ransack(params[:q])
   end
 end

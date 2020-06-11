@@ -7,6 +7,7 @@ class PostsController < ApplicationController
     @categories = Post.category.values
     @genres = Post.genre.values
     @posts = @q.result(distinct: true).page(params[:page])
+    params[:q] = { sorts: 'id desc' }
   end
 
   def search
@@ -68,7 +69,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:word, :source, :who, :category, :episode, :genre, :status, :user_id)
+    params.require(:post).permit(:word, :source, :who, :category, :title, :episode, :genre, :status, :user_id)
   end
 
   def set_post
