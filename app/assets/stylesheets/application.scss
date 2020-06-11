@@ -40,12 +40,21 @@ header {
     text-align: center;
     &:hover {
       opacity: 0.8;
-      }
+    }
+  }
+  .nav-text {
+    color: #555;
   }
 }
 
 footer {
   background: $sub-color;
+  .nav-text {
+    color: #555;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 body {
