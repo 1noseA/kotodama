@@ -38,7 +38,7 @@
     </div>
   
     <div class="col-md-12 py-5 mb-5 text-center bg-light">
-      <%= f.submit "投稿する", class: "btn btn-add" %>
+      <%= f.submit "投稿する", class: "btn btn-add", data: { confirm: "引用元は詳しく書かれていますか？<br>引用部分を改変していないですか？", cancel: 'キャンセル', commit: '投稿する' }, title: "引用ルールを守れていますか?" %>
     </div>
   <% end %>    
   </div>
