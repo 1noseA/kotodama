@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
     #@posts = Post.page(params[:page])
@@ -26,7 +28,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    if @post.save!
+    if @post.save
       redirect_to posts_path
       flash[:notice] = "投稿しました"
     else
@@ -69,7 +71,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:word, :source, :who, :category, :title, :episode, :genre, :status, :user_id)
+    params.require(:post).permit(:word, :source, :category, :title, :episode, :genre, :status, :user_id)
   end
 
   def set_post
@@ -78,5 +80,12 @@ class PostsController < ApplicationController
 
   def search_params
     params.require(:q).permit!
+  end
+
+  def correct_user
+    post = Post.find(params[:id])
+    if current_user != post.user
+      redirect_to user_path(current_user)
+    end
   end
 end

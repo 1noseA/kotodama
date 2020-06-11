@@ -1,0 +1,11 @@
+<% if model.errors.any? %>
+	<div id="error_explanation">
+		<ul>
+		  <script type= "text/javascript">
+		    <% model.errors.full_messages.each do |msg| %>
+		      toastr.error('<%= msg %>');
+		    <% end %>
+		  </script>
+		</ul>
+	</div>
+<% end %>

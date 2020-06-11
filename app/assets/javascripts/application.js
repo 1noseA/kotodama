@@ -18,6 +18,7 @@
 //= require bootstrap-sprockets
 //= require toastr
 //= require social-share-button
+//= require data-confirm-modal
 //= require_tree .
 
 //画像プレビュー

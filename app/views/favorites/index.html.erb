@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 my-5 mx-auto">
-      <h3 class="mb-3">いいねした人</h3>
+      <h3 class="mb-3">お気に入りした人</h3>
       <% @favorites.each do |favorite| %>
         <% if favorite.user.image.present? %>
           <%= image_tag favorite.user.image.to_s, size: "80x80", class: "user-image" %>

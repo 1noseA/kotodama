@@ -2,7 +2,6 @@
   <tr>
     <th class="w-50">言葉</th>
     <th>引用元</th>
-    <%# <th>人名</th> %>
     <th>カテゴリー</th>
     <th></th>
   </tr>
@@ -13,16 +12,13 @@
           <% unless post.released? %>
             <i class="fas fa-lock"></i>
           <% end %>
-          <%= post.word %>
+          「<i><%= post.word %></i>」
         </td>
         <td>
           <%= post.source %>
         </td>
-        <%# <td>
-          <%= post.who %>
-        <%# </td> %>
         <td>
-          <%= post.category %>
+          <%= t("enumerize.post.category.#{post.category}") %>
         </td>
         <td>
           <%= link_to "詳細", post_path(post), class: "btn btn-move" %>

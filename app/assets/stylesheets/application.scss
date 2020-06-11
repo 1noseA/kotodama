@@ -28,10 +28,6 @@ $sub-color: #9caeb7;
 $btn-color: #2ca9e1;
 $danger-color: #ff3333;
 
-* {
-  color: #555;
-}
-
 header {
   background: $main-color;
 
@@ -40,16 +36,29 @@ header {
     text-align: center;
     &:hover {
       opacity: 0.8;
-      }
+    }
+  }
+  .nav-text {
+    color: #555;
   }
 }
 
 footer {
   background: $sub-color;
+  .nav-text {
+    color: #555;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
-body {
+main {
   background: $base-color;
+  color: #555;
+  tr {
+    color: #555;
+  }
 }
 
 .user-image{
@@ -140,4 +149,12 @@ main {
 
 .info-image {
   border-radius: 50%;
+}
+
+.nav-link {
+  color: #555;
+}
+
+.list-group-item {
+  color: #555;
 }
