@@ -10,7 +10,8 @@ User.create!(
   name: "aaa",
   email: "aa@aa",
   password: "aaaaaa",
-  status: 1
+  status: 1,
+  admin: true
 )
 User.create!(
   name: "bbb",

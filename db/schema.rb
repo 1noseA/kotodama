@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 2020_06_10_000817) do
   create_table "posts", force: :cascade do |t|
     t.text "word", null: false
     t.string "source", null: false
-    t.string "who", null: false
     t.string "category", null: false
     t.text "episode"
     t.string "genre"

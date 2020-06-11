@@ -12,10 +12,7 @@
       <%= f.text_area :word, class: "mb-3 w-100", placeholder: "あなたが救われた言葉を教えてください" %><br>
 
       <span class="label p-1 mr-1 rounded">必須</span><%= f.label :source %><br>
-      <%= f.text_field :source, class: "mb-3 w-100", placeholder: "作品名など引用元を入力してください" %><br>
-
-      <span class="label p-1 mr-1 rounded">必須</span><%= f.label :who %><br>
-      <%= f.text_field :who, class: "mb-3 w-100", placeholder: "誰の言葉か教えてください" %><br>
+      <%= f.text_field :source, class: "mb-3 w-100", placeholder: "作品名や作者など引用元を入力してください" %><br>
 
       <span class="label p-1 mr-1 rounded">必須</span><%= f.label :category %><br>
       <%= f.select :category, Post.category.options, {include_blank: "--選択してください--"} %>
@@ -31,11 +28,6 @@
       <%= f.label :genre %><br>
       <%= f.select :genre, Post.genre.options, {include_blank: "--選択してください--"} %>
 
-      <%# <p><% if @post.released? %>
-        <%# <%= link_to '非公開にする',post_nonrelease_path(@post), method: :patch %>
-      <%# <% else %>
-        <%# <%= link_to '公開する',post_release_path(@post), method: :patch %> 
-      <%# <% end %>
       <p></p>
       <span><%= f.radio_button :status, :released, {checked: true} %> 公開する</span>
       <span><%= f.radio_button :status, :nonreleased, {} %> 非公開にする</span>
