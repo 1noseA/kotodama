@@ -1,6 +1,11 @@
 class Post < ApplicationRecord
   belongs_to :user
 
+  validates :word, presence: true, length: { maximum: 100 }
+  validates :source, :title, presence: true, length: { maximum: 20 }
+  validates :category, :genre, presence: true
+  validates :episode, presence: true
+
   extend Enumerize
 
   enumerize :category,

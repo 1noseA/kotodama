@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 2020_06_10_000817) do
     t.text "word", null: false
     t.string "source", null: false
     t.string "category", null: false
-    t.text "episode"
-    t.string "genre"
+    t.text "episode", null: false
+    t.string "genre", null: false
     t.integer "status", limit: 1, default: 1, null: false
     t.integer "user_id"
     t.datetime "created_at", null: false
