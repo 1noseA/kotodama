@@ -28,10 +28,6 @@ $sub-color: #9caeb7;
 $btn-color: #2ca9e1;
 $danger-color: #ff3333;
 
-* {
-  
-}
-
 header {
   background: $main-color;
 
@@ -57,9 +53,12 @@ footer {
   }
 }
 
-body {
+main {
   background: $base-color;
   color: #555;
+  tr {
+    color: #555;
+  }
 }
 
 .user-image{
