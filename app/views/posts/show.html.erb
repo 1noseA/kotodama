@@ -5,7 +5,7 @@
         <p class="mb-4">言葉<br>「<i><%= @post.word %></i>」</p>
         <hr width="100%" align="center">
         <p>引用元　　：　<%= @post.source %></p>
-        <p>カテゴリー：　<%= @post.category %></p>
+        <p>カテゴリー：　<%= t("enumerize.post.category.#{@post.category}") %></p>
       </div>
 
       <%# お気に入りボタン %>
@@ -23,7 +23,7 @@
       <div class="my-4">
         <p>タイトル　：　<%= @post.title %></p>
         <p>エピソード<br><%= @post.episode %></p>
-        <p>ジャンル　：　<%= @post.genre %></p>
+        <p>ジャンル　：　<%= t("enumerize.post.genre.#{@post.genre}") %></p>
       </div>
 
       <hr width="100%" align="center">
