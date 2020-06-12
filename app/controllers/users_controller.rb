@@ -8,7 +8,9 @@ class UsersController < ApplicationController
   end
   
   def show
-    @posts = Post.order("RANDOM()").limit(5)
+    @random = Post.order("RANDOM()").limit(5)
+    @posts = Post.where(id: current_user.id).page(params[:page])
+    @favorites = Favorite.where(id: current_user.id).page(params[:page])
   end
 
   def edit
