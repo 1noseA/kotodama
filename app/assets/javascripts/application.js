@@ -36,3 +36,23 @@ $(document).on('turbolinks:load', function() {
       readURL(this);
   });
 });
+
+// スライダー
+$(document).on('turbolinks:load', function(){
+    $('.random-slide').slick({
+      // 左右ボタンで画像の切り替えをできるかどうか
+      accessibility: true,
+      // trueで自動再生
+      autoplay:true,
+      // 自動再生で切り替えをする時間
+      autoplaySpeed: 3000,
+      // 自動再生や左右の矢印でスライドするスピード
+      speed: 300,
+      // 自動再生時にスライドのエリアにマウスオンで一時停止するかどうか
+      pauseOnHover: true,
+      // 自動再生時にドットにマウスオンで一時停止するかどうか
+      pauseOnDotsHover: true,
+      // 画像下のドット（ページ送り）を表示
+      dots:true,
+    });
+  });

@@ -3,24 +3,29 @@
     <div class="row">
       <h3 class="pt-5 mx-auto">あなたが救われた言葉を教えてください</h3>
 
-      <div class="random-slide col-md-10 mx-auto mt-3">
+      <div class="random-slide col-md-10 mx-auto mt-3 rounded">
         <%# ランダムスライド %>
+        <% @posts.each do |post| %>
+        <div class="slide-item text-center">
+          <i class="slide-word">
+          <%= post.word %></i>
+          <p class="slide-source">
+          <%= post.source %></p>
+        </div>
+        <% end %>
       </div>
 
       <h3 class="pt-5 mx-auto">コトダマは、あなたが救われた言葉を記録、共有するサイトです</h3>
     </div>
     <div class="row pt-3">
       <ul class="about list-unstyled">
-        <li class="col-md-3 offset-1 p-3 mb-5 bg-light
- rounded">
+        <li class="col-md-3 offset-1 p-3 mb-5 bg-light rounded">
           <%#= image_tag 'memo.jpg' %><%= image_tag 'pancake.png', :size => '160x140' %><p class="mt-4">救われた言葉を記録し、落ち込んだときなどにすぐに見返すことができます。</p>
         </li>
-        <li class="col-md-3 p-3 mx-5 mb-5 bg-light
- rounded">
+        <li class="col-md-3 p-3 mx-5 mb-5 bg-light rounded">
           <%#= image_tag 'good.jpg' %><%= image_tag 'sandwich.png', :size => '160x160' %><p>他の人の救われた言葉も見ることができます。お気に入り登録をすればマイページで流すことができます</p>
         </li>
-        <li class="col-md-3 p-3 mb-5 bg-light
- rounded">
+        <li class="col-md-3 p-3 mb-5 bg-light rounded">
           <%#= image_tag 'comment.jpg' %><%= image_tag 'purin.png', :size => '160x160' %><p>コメントでその言葉にまつわるエピソードを教えてください。ジャンルやハッシュタグで検索できます。</p>
         </li>
       </ul>

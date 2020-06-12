@@ -20,6 +20,9 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import "toastr";
+@import "slick-theme"; 
+@import "slick";
+// @import "carousel";
 
 //カラーの変数を定義
 $base-color: #a0d8ef;
@@ -157,4 +160,12 @@ main {
 
 .list-group-item {
   color: #555;
+}
+
+.random-slide {
+  height: 400px;
+  background: #a0d8ef;
+  .slide-item {
+    margin-top: 120px;
+  }
 }
