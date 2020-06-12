@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
   
   def show
+    @posts = Post.order("RANDOM()").limit(5)
   end
 
   def edit

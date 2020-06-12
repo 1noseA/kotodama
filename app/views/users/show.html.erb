@@ -1,12 +1,27 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-9 my-5">
-      <h3><%= @user.name %>のページ</h3>
-      <% if @user.admin? %>
-        <%= link_to "管理画面へ行く", rails_admin_path, class: "btn btn-move" %>
-      <% end %>
+    <div class="col-md-12 mt-5 mb-3">
+    <span class="username"><%= @user.name %>のページ</span>
+    <% if @user.admin? %>
+      <%= link_to "管理画面へ行く", rails_admin_path, class: "btn btn-move float-right" %>
+    <% end %>
     </div>
-    <div class="col-md-3 p-4 my-5 bg-light rounded"> 
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <div class="mr-3 mb-5 bg-light rounded random-slide">
+        <%# ランダムスライド %>
+        <% @posts.each do |post| %>
+        <div class="slide-item text-center">
+          <i class="slide-word">
+          <%= post.word %></i>
+          <p class="slide-source">
+          <%= post.source %></p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-3 p-4 mb-5 bg-light rounded"> 
       <%= render 'profile', user: @user %>
     </div>
   </div>
