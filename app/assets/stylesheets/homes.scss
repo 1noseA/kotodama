@@ -6,6 +6,9 @@
   width: 100%;
   height: 500px;
   background: #a0d8ef;
+  .slide-item {
+    margin-top: 160px;
+  }
 }
 
 .top-page {
@@ -19,4 +22,12 @@
 
 li {
   box-sizing: border-box;
+}
+
+.slide-word {
+  font-size: 40px;
+}
+
+.slide-source {
+  font-size: 32px;
 }
