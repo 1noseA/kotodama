@@ -37,6 +37,7 @@ $(document).on('turbolinks:load', function() {
   });
 });
 
+// スライダー
 $(document).on('turbolinks:load', function(){
     $('.random-slide').slick({
       // 左右ボタンで画像の切り替えをできるかどうか
