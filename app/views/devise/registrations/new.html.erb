@@ -32,11 +32,6 @@
 
         <div class="actions my-3">
           <%= f.submit "新規登録", class: "btn btn-move" %>
-          <%= form_for(User.new, url:user_session_path) do |f| %>
-            <%= f.hidden_field :email, value: "xxx@example.com" %>
-            <%= f.hidden_field :password, value: "password" %>
-            <%= f.submit "かんたんログイン", class: "btn btn-add"%> 
-          <% end %>
         </div>
       <% end %>
 
