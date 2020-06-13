@@ -22,7 +22,8 @@
         <% end %>
 
         <div class="actions mb-3">
-          <%= f.submit "ログイン" %>
+          <%= f.submit "ログイン", class: "btn btn-move" %>
+          <%= link_to 'さくっとログイン', users_guest_sign_in_path, method: :post, class: "btn btn-add" %>
         </div>
       <% end %>
 
