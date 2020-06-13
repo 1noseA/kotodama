@@ -11,14 +11,7 @@
     <div class="col-md-9">
       <div class="mr-3 mb-5 bg-light rounded random-slide">
         <%# ランダムスライド %>
-        <% @random.each do |post| %>
-        <div class="slide-item text-center">
-          <i class="slide-word">
-          <%= post.word %></i>
-          <p class="slide-source">
-          <%= post.source %></p>
-        </div>
-        <% end %>
+        <%= render 'homes/random', random: @random %>
       </div>
     </div>
     <div class="col-md-3 p-4 mb-5 bg-light rounded"> 

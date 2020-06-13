@@ -5,14 +5,7 @@
 
       <div class="random-slide col-md-10 mx-auto mt-3 rounded">
         <%# ランダムスライド %>
-        <% @posts.each do |post| %>
-        <div class="slide-item text-center">
-          <i class="slide-word">
-          <%= post.word %></i>
-          <p class="slide-source">
-          <%= post.source %></p>
-        </div>
-        <% end %>
+        <%= render 'random', random: @random %>
       </div>
 
       <h3 class="pt-5 mx-auto">コトダマは、あなたが救われた言葉を記録、共有するサイトです</h3>
