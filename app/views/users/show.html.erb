@@ -24,21 +24,21 @@
       <%# タブ %>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a href="#word" class="nav-link active" data-toggle="tab">私の投稿</a>
+          <a href="#mypost" class="nav-link active" data-toggle="tab">私の投稿</a>
         </li>
         <li class="nav-item">
-          <a href="#episode" class="nav-link" data-toggle="tab">私のお気に入り</a>
+          <a href="#favpost" class="nav-link" data-toggle="tab">私のお気に入り</a>
         </li>
       </ul>
 
     <%# パネル部分 %>
     <div class="tab-content">
-      <div id="word" class="tab-pane active">
+      <div id="mypost" class="tab-pane active">
         <%# 自分の投稿一覧 %>
         <%= render 'posts/post' %>
         <%= paginate @posts %>
       </div>
-      <div id="episode" class="tab-pane">
+      <div id="favpost" class="tab-pane">
         <%# お気に入りした投稿一覧 %>
         <table class="table mt-3">
           <tr>
@@ -47,24 +47,24 @@
             <th>カテゴリー</th>
             <th></th>
           </tr>
-          <% @favorites.each do |favorite| %>
+          <% @favorite_posts.each do |post| %>
             <tr>
               <td>
-                「<i><%= favorite.post.word %></i>」
+                「<i><%= post.word %></i>」
               </td>
               <td>
-                <%= favorite.post.source %>
+                <%= post.source %>
               </td>
               <td>
-                <%= t("enumerize.favorite.post.category.#{favorite.post.category}") %>
+                <%= t("enumerize.post.category.#{post.category}") %>
               </td>
               <td>
-                <%= link_to "詳細", post_path(favorite.post), class: "btn btn-move" %>
+                <%= link_to "詳細", post_path(post), class: "btn btn-move" %>
               </td>
             </tr>
           <% end %>
         </table>
-        <%= paginate @favorites %>
+        <%= paginate @favorite_posts %>
       </div>
     </div>
   </div>
