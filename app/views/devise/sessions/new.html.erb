@@ -23,8 +23,12 @@
 
         <div class="actions mb-3">
           <%= f.submit "ログイン", class: "btn btn-move" %>
-          <%= link_to 'さくっとログイン', users_guest_sign_in_path, method: :post, class: "btn btn-add" %>
         </div>
+        <%= form_for(User.new, url:user_session_path) do |f| %>
+          <%= f.hidden_field :email, value: "xxx@example.com" %>
+          <%= f.hidden_field :password, value: "password" %>
+          <%= f.submit "かんたんログイン", class: "btn btn-add"%> 
+        <% end %>
       <% end %>
 
       <%= render "devise/shared/links" %>
