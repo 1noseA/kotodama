@@ -1,34 +1,42 @@
 <div class="top-page">
-  <div class="container">
-    <div class="row">
-      <h3 class="pt-5 mx-auto">あなたが救われた言葉を教えてください</h3>
+<div class="container">
+  <div class="row">
+    <h3 class="pt-5 mx-auto">あなたが救われた言葉を教えてください</h3>
 
-      <div class="random-slide col-md-10 mx-auto mt-3 rounded">
-        <%# ランダムスライド %>
-        <% @posts.each do |post| %>
-        <div class="slide-item text-center">
-          <i class="slide-word">
-          <%= post.word %></i>
-          <p class="slide-source">
-          <%= post.source %></p>
-        </div>
-        <% end %>
-      </div>
-
-      <h3 class="pt-5 mx-auto">コトダマは、あなたが救われた言葉を記録、共有するサイトです</h3>
+    <div class="random-slide col-md-10 mx-auto mt-3 rounded">
+      <%# ランダムスライド %>
+      <%= render 'random', random: @random %>
     </div>
-    <div class="row pt-3">
-      <ul class="about list-unstyled">
-        <li class="col-md-3 offset-1 p-3 mb-5 bg-light rounded">
-          <%#= image_tag 'memo.jpg' %><%= image_tag 'pancake.png', :size => '160x140' %><p class="mt-4">救われた言葉を記録し、落ち込んだときなどにすぐに見返すことができます。</p>
-        </li>
-        <li class="col-md-3 p-3 mx-5 mb-5 bg-light rounded">
-          <%#= image_tag 'good.jpg' %><%= image_tag 'sandwich.png', :size => '160x160' %><p>他の人の救われた言葉も見ることができます。お気に入り登録をすればマイページで流すことができます</p>
-        </li>
-        <li class="col-md-3 p-3 mb-5 bg-light rounded">
-          <%#= image_tag 'comment.jpg' %><%= image_tag 'purin.png', :size => '160x160' %><p>コメントでその言葉にまつわるエピソードを教えてください。ジャンルやハッシュタグで検索できます。</p>
-        </li>
-      </ul>
+
+    <h3 class="pt-5 mx-auto">コトダマは、あなたが救われた言葉を記録、共有するサイトです</h3>
+  </div>
+  <div class="row">
+    <ul class="about list-unstyled mt-3">
+      <li class="col-md-3 offset-1 p-3 mb-5 bg-light rounded">
+        <%#= image_tag 'memo.jpg' %><p class="text-center"><%= image_tag 'pancake.png', :size => '160x140' %></p>
+        <p class="mt-4">救われた言葉を記録し、落ち込んだときなどにすぐに見返すことができます。言葉にまつわるエピソードも教えてください。</p>
+      </li>
+      <li class="col-md-3 p-3 mx-5 mb-5 bg-light rounded">
+        <%#= image_tag 'good.jpg' %><p class="text-center"><%= image_tag 'sandwich.png', :size => '160x160' %></p>
+        <p>他の人の救われた言葉も見ることができます。お気に入り登録をすればマイページのスライドで流すことができます。</p>
+      </li>
+      <li class="col-md-3 p-3 mb-5 bg-light rounded">
+        <%#= image_tag 'comment.jpg' %><p class="text-center"><%= image_tag 'purin.png', :size => '160x160' %></p>
+        <p>単語やカテゴリーで検索することができます。投稿の公開・非公開設定やコメントもできます。</p>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-10 p-4 mb-5 mx-auto bg-light rounded">
+      <h3 class="text-center mb-4">このサイトを作った思い</h3>
+        <p>私自身落ち込むことが多く、歌詞やネット上の言葉に救われることがありました。</p>
+        <p>落ち込んだ時にすぐに確認できるように記録したい、また私と同じように悩んでいる人にも共有したいと思いました。</P>
+        <p>サイト全体のデザインはクリームソーダをイメージしました。</p>
+        <p>作成当時のマイブームもありますが、人生で初めて嬉し涙を流した日に見上げた空が「クリームソーダみたい」と思ったことを今でも覚えており、このサイトにぴったりだと思いました。</p>
+        <p>シュワシュワの炭酸のように数々の言葉で、さわやかな気持ちになれますようにという願いが込められています。</p>
+        <p class="text-center"><%= link_to "さっそく使ってみる", new_user_registration_path, class: "btn btn-move mt-4" %></p>
+        <p>（※投稿一覧は会員でなくても見られますが、投稿・お気に入り・コメントするには会員登録・ログインが必要です。）</p>
     </div>
   </div>
+</div>
 </div>
