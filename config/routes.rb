@@ -28,4 +28,8 @@ Rails.application.routes.draw do
       delete 'destroy_all'
     end
   end
+
+  resources :inquiries, only: [:new, :create]
+
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end

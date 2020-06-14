@@ -27,6 +27,7 @@ ja:
       comment: コメント
       favorite: お気に入り
       notification: 通知
+      inquiry: お問い合わせ
     attributes:
       post:
         word: 言葉
@@ -65,6 +66,10 @@ ja:
         checked: 確認済み
         created_at: 作成日
         updated_at: 更新日
+      inquiry:
+        name: 名前
+        email: Eメール
+        message: お問い合わせ内容
   views:
     pagination:
       first: <i class="fas fa-angle-double-left"></i>

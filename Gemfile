@@ -53,6 +53,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rubocop-airbnb'
+  gem 'letter_opener_web'
 end
 
 group :test do
@@ -85,3 +86,4 @@ gem 'rails_admin'
 gem 'cancancan'
 gem "rails_admin_import"
 gem 'data-confirm-modal'
+gem 'dotenv-rails'
