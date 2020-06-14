@@ -85,3 +85,4 @@ gem 'rails_admin'
 gem 'cancancan'
 gem "rails_admin_import"
 gem 'data-confirm-modal'
+gem 'dotenv-rails'
