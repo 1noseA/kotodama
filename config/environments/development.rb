@@ -68,6 +68,9 @@ Rails.application.configure do
    password:             ENV['PASS'],
    authentication:       'plain',
    enable_starttls_auto:  true
-}
+  }
+
+  config.action_mailer.default_url_options = {  host: 'localhost', port: 3000 }
+  ActionMailer::Base.delivery_method = :letter_opener
 end
 BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
