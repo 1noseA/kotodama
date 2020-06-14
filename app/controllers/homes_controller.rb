@@ -1,6 +1,6 @@
 class HomesController < ApplicationController
   def top
-    @random = Post.order("RANDOM()").limit(5)
+    @random = Post.where(status: 1).order("RANDOM()")
   end
 
   def info
