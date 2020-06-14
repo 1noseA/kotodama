@@ -5,7 +5,12 @@
     <%= image_tag "default.jpg", size: "100x100", class: "user-image" %>
   <% end %>
 </div>
-<p>名前<%= user.name %></p>
+<p>名前
+  <% unless user.publish? %>
+    <i class="fas fa-user-lock"></i>
+  <% end %>
+  <%= user.name %>
+</p>
 <p>自己紹介<%= simple_format(user.introduction) %></p>
 <% if user == current_user %>
   <div class="text-center">

@@ -6,10 +6,10 @@
     <th></th>
   </tr>
   <% @posts.each do |post| %>
-    <% if post.released? || post.user.released? || post.user == current_user %>
+    <% if post.released? && post.user.publish? || post.user == current_user %>
       <tr>
         <td>
-          <% unless post.released? %>
+          <% if post.nonreleased? || post.user.privated? %>
             <i class="fas fa-lock"></i>
           <% end %>
           「<i><%= post.word %></i>」
