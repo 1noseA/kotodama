@@ -1,4 +1,4 @@
-class InquiryController < ApplicationController
+class InquiriesController < ApplicationController
   def new
     @inquiry = Inquiry.new
   end

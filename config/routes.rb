@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :inquiry, only: [:new, :create]
+  resources :inquiries, only: [:new, :create]
 
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end
