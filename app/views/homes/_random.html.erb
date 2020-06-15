@@ -2,9 +2,9 @@
   <% if post.user.publish? %>
     <div class="slide-item text-center">
       <i class="slide-word">
-      <%= post.word %></i>
-      <p class="slide-source">
-      <%= post.source %></p>
+      <%= simple_format(post.word) %></i>
+      <p class="slide-source mt-4">
+      <%= simple_format(post.source) %></p>
     </div>
   <% end %>
 <% end %>

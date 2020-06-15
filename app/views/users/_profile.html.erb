@@ -11,7 +11,8 @@
   <% end %>
   <%= user.name %>
 </p>
-<p>自己紹介<%= simple_format(user.introduction) %></p>
+<span>自己紹介</span>
+<span><%= simple_format(user.introduction) %></span>
 <% if user == current_user %>
   <div class="text-center">
   <%= link_to "編集する", edit_user_path(user), class: "btn btn-update mt-4 mr-3" %>

@@ -7,69 +7,69 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!(
-  name: "aaa",
-  email: "aa@aa",
-  password: "aaaaaa",
+  name: "いちご",
+  email: "1@example.com",
+  password: "password",
   status: 1,
   admin: true
 )
 User.create!(
-  name: "bbb",
-  email: "bb@bb",
-  password: "bbbbbb",
+  name: "キウイ",
+  email: "2@example.com",
+  password: "password",
   status: 1
 )
 User.create!(
-  name: "ccc",
-  email: "cc@cc",
-  password: "cccccc",
+  name: "メロン",
+  email: "3@example.com",
+  password: "password",
   status: 1
 )
 User.create!(
-  name: "ddd",
-  email: "dd@dd",
-  password: "dddddd",
+  name: "さくらんぼ",
+  email: "4@example.com",
+  password: "password",
   status: 1
 )
 User.create!(
-  name: "eee",
-  email: "ee@ee",
-  password: "eeeeee",
+  name: "もも",
+  email: "5@example.com",
+  password: "password",
   status: 1
 )
 User.create!(
-  name: "fff",
-  email: "ff@ff",
-  password: "ffffff",
+  name: "梨",
+  email: "6@example.com",
+  password: "password",
   status: 1
 )
 User.create!(
-  name: "ggg",
-  email: "gg@gg",
-  password: "gggggg",
+  name: "ぶどう",
+  email: "7@example.com",
+  password: "password",
   status: 1
 )
 User.create!(
-  name: "hhh",
-  email: "hh@hh",
-  password: "hhhhhh",
+  name: "りんご",
+  email: "8@example.com",
+  password: "password",
   status: 1
 )
 User.create!(
-  name: "iii",
-  email: "ii@ii",
-  password: "iiiiii",
+  name: "柿",
+  email: "9@example.com",
+  password: "password",
   status: 1
 )
 User.create!(
-  name: "jjj",
-  email: "jj@jj",
-  password: "jjjjjj",
+  name: "みかん",
+  email: "10@example.com",
+  password: "password",
   status: 1
 )
 User.create!(
-  name: "kkk",
-  email: "kk@kk",
-  password: "kkkkkk",
+  name: "バナナ",
+  email: "11@example.com",
+  password: "password",
   status: 1
 )

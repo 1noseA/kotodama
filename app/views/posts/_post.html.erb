@@ -12,10 +12,10 @@
           <% if post.nonreleased? || post.user.privated? %>
             <i class="fas fa-lock"></i>
           <% end %>
-          「<i><%= post.word %></i>」
+          <i><%= simple_format(post.word) %></i>
         </td>
         <td>
-          <%= post.source %>
+          <%= simple_format(post.source) %>
         </td>
         <td>
           <%= t("enumerize.post.category.#{post.category}") %>

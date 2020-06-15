@@ -8,10 +8,10 @@
   <% @favorite_posts.each do |post| %>
     <tr>
       <td>
-        「<i><%= post.word %></i>」
+        <i><%= simple_format(post.word) %></i>
       </td>
       <td>
-        <%= post.source %>
+        <%= simple_format(post.source) %>
       </td>
       <td>
         <%= t("enumerize.post.category.#{post.category}") %>

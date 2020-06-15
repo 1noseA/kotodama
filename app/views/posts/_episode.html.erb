@@ -19,7 +19,7 @@
             <%= t("enumerize.post.genre.#{post.genre}") %>
           </td>
           <td>
-            <%= post.word %>
+            <%= simple_format(post.word) %>
           </td>
           <td>
             <%= link_to "詳細", post_path(post), class: "btn btn-move" %>
