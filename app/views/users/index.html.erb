@@ -20,7 +20,7 @@
                 <%= user.name %>
               </td>
               <td class="w-50">
-                <%= user.introduction %>
+                <%= simple_format(user.introduction) %>
               </td>
             </tr>
           <% end %>

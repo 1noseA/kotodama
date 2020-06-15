@@ -5,6 +5,12 @@
 .top-page {
   background: image-url('soda.jpg');
   background-size: cover;
+  .slide-word {
+    font-size: 32px;
+  }
+  .slide-source {
+    font-size: 24px;
+  }
 }
 
 .about {
