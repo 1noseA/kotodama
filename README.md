@@ -1,5 +1,5 @@
 # コトダマ
-<img width="1427" alt="1" src="https://user-images.githubusercontent.com/59720615/84726283-7be24300-afc7-11ea-93fc-3d267ecea59d.png">
+<img width="1427" alt="1" src="https://user-images.githubusercontent.com/59720615/84727264-a46b3c80-afc9-11ea-9190-6914e56cc51a.png">
 
 ## 概要
 自分が救われた言葉を記録、共有できるアプリケーション。
@@ -17,7 +17,7 @@
 - twitterシェアボタン
 
 マイページで自分の投稿した言葉とお気に入りした言葉がスライドで流せます。
-<img width="1422" alt="2" src="https://user-images.githubusercontent.com/59720615/84726291-800e6080-afc7-11ea-97bc-adf76e7a980d.png">
+<img width="1424" alt="2" src="https://user-images.githubusercontent.com/59720615/84727274-a7662d00-afc9-11ea-9f80-ea52d1afcf3e.png">
 
 単語やカテゴリー、言葉にまつわるエピソードで検索できます。
 <img width="1427" alt="3" src="https://user-images.githubusercontent.com/59720615/84726295-83a1e780-afc7-11ea-9c8a-835d960873b7.png">
