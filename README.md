@@ -1,4 +1,5 @@
 # コトダマ
+<img width="1427" alt="1" src="https://user-images.githubusercontent.com/59720615/84726283-7be24300-afc7-11ea-93fc-3d267ecea59d.png">
 
 ## 概要
 自分が救われた言葉を記録、共有できるアプリケーション。
@@ -10,8 +11,17 @@
 - お気に入り機能
 - ページネーション機能（kaminari）
 - 画像アップロード（carrierwave）
-- 検索機能（カテゴリー、単語、ジャンル、ハッシュタグ/ransack）
+- 検索機能（ransack）
 - ソート機能（投稿順、お気に入り数順、コメント数順）
 - 通知機能
-- お問い合わせ
 - twitterシェアボタン
+
+<img width="1422" alt="2" src="https://user-images.githubusercontent.com/59720615/84726291-800e6080-afc7-11ea-97bc-adf76e7a980d.png">
+マイページで自分の投稿した言葉とお気に入りした言葉がスライドで流せます。
+
+<img width="1427" alt="3" src="https://user-images.githubusercontent.com/59720615/84726295-83a1e780-afc7-11ea-9c8a-835d960873b7.png">
+単語やカテゴリー、言葉にまつわるエピソードで検索できます。
+
+
+<img width="1419" alt="4" src="https://user-images.githubusercontent.com/59720615/84726300-87ce0500-afc7-11ea-98b7-335ececf2832.png">
+お気に入りやコメント、Twitterでシェアできます。
