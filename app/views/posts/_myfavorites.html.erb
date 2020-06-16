@@ -1,0 +1,24 @@
+<table class="table mt-3">
+  <tr>
+    <th class="w-50">言葉</th>
+    <th>引用元</th>
+    <th>カテゴリー</th>
+    <th></th>
+  </tr>
+  <% @favorite_posts.each do |post| %>
+    <tr>
+      <td>
+        <i><%= simple_format(post.word) %></i>
+      </td>
+      <td>
+        <%= simple_format(post.source) %>
+      </td>
+      <td>
+        <%= t("enumerize.post.category.#{post.category}") %>
+      </td>
+      <td>
+        <%= link_to "詳細", post_path(post), class: "btn btn-move" %>
+      </td>
+    </tr>
+  <% end %>
+</table>

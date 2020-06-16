@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-10 p-5 my-5 mx-auto bg-light rounded">
       <div class="mb-3">
-        <p class="mb-4">言葉<br>「<i><%= @post.word %></i>」</p>
+        <p class="mb-4">言葉<br><i><%= simple_format(@post.word) %></i></p>
         <hr width="100%" align="center">
         <p>引用元　　：　<%= @post.source %></p>
         <p>カテゴリー：　<%= t("enumerize.post.category.#{@post.category}") %></p>
@@ -20,7 +20,7 @@
 
       <div class="my-4">
         <p>タイトル　：　<%= @post.title %></p>
-        <p>エピソード<br><%= @post.episode %></p>
+        <p>エピソード<br><%= simple_format(@post.episode) %></p>
         <p>ジャンル　：　<%= t("enumerize.post.genre.#{@post.genre}") %></p>
       </div>
 

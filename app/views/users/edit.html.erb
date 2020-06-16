@@ -1,17 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4 mx-auto p-5 m-5 bg-light rounded">
-      <h3 class="text-center mb-5">プロフィール設定</h3>
+      <h3 class="text-center mb-4">プロフィール設定</h3>
 
       <%= form_with model: @user do |f| %>
+      <div class="text-center">
         <% if @user.image.present? %>
           <%= image_tag @user.image.to_s, size: "100x100", id: "prev_img", class: "user-image" %>
         <% else %>
           <%= image_tag "default.jpg", size: "100x100", id: "prev_img", class: "user-image" %>
         <% end %><br>
 
-        <label for="post_img" class= "btn btn-add">
+        <label for="post_img" class= "btn btn-add mt-4">
         <%= f.file_field :image, id: "post_img", class: "img_form" %>画像選択</label><br>
+      </div>
 
         <%= f.label :name %><br>
         <%= f.text_field :name, class: "w-100" %><br>
@@ -19,16 +21,11 @@
         <%= f.label :introduction %><br>
         <%= f.text_area :introduction, class: "w-100" %><br>
 
-        <span><%= f.radio_button :status, :released, {checked: true} %> 公開する</span>
-        <span><%= f.radio_button :status, :nonreleased, {} %> 非公開にする</span><br>
+        <span><%= f.radio_button :status, :publish, {checked: true} %> 公開する</span>
+        <span><%= f.radio_button :status, :privated, {} %> 非公開にする</span><br>
 
-        <%= f.submit "更新する", class: "btn btn-update mt-3" %>
+        <%= f.submit "更新する", class: "btn btn-update mt-4 w-100" %>
       <% end %>
-      <%# if @user.released? %>
-        <%#= link_to '非公開にする',user_nonrelease_path(@user), method: :patch %>
-      <%# else %>
-        <%#= link_to '公開する',user_release_path(@user), method: :patch %>
-      <%# end %>
     </div>
   </div>
 </div>

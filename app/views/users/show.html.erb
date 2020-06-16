@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mypage">
   <div class="row">
     <div class="col-md-12 mt-5 mb-3">
     <span class="username"><%= @user.name %>のページ</span>
@@ -20,7 +20,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-9 my-5">
+    <div class="col-md-12 my-5">
       <%# タブ %>
       <ul class="nav nav-tabs">
         <li class="nav-item">
@@ -40,30 +40,7 @@
       </div>
       <div id="favpost" class="tab-pane">
         <%# お気に入りした投稿一覧 %>
-        <table class="table mt-3">
-          <tr>
-            <th class="w-50">言葉</th>
-            <th>引用元</th>
-            <th>カテゴリー</th>
-            <th></th>
-          </tr>
-          <% @favorite_posts.each do |post| %>
-            <tr>
-              <td>
-                「<i><%= post.word %></i>」
-              </td>
-              <td>
-                <%= post.source %>
-              </td>
-              <td>
-                <%= t("enumerize.post.category.#{post.category}") %>
-              </td>
-              <td>
-                <%= link_to "詳細", post_path(post), class: "btn btn-move" %>
-              </td>
-            </tr>
-          <% end %>
-        </table>
+        <%= render 'posts/myfavorites' %>
         <%= paginate @favorite_posts %>
       </div>
     </div>

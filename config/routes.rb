@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/privacy' => 'homes#privacy'
 
   resources :users, only:[:index, :show, :edit, :update] do
-    patch :nonrelease, :release
+    patch :privated, :publish
   end
   put "/users/:id/hide" => "users#hide", as: 'users_hide'
 

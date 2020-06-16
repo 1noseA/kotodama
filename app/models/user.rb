@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   # アカウント公開・非公開
-  enum status:{nonreleased: 0, released: 1}
+  enum status:{privated: 0, publish: 1}
 
   # carrierwave関連付け
   mount_uploader :image, ImagesUploader

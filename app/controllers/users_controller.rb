@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
   before_action :authenticate_user!
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy, :show]
 
   def index
     @users = User.page(params[:page])
@@ -36,15 +36,15 @@ class UsersController < ApplicationController
   end
 
   # アカウント公開・非公開
-  def release
+  def publish
     @user =  User.find(params[:user_id])
-    @user.released! unless @user.released?
+    @user.publish! unless @user.publish?
     redirect_to user_path(@user), notice: 'このアカウントを公開しました'
   end
 
-  def nonrelease
+  def privated
     @user =  User.find(params[:user_id])
-    @user.nonreleased! unless @user.nonreleased?
+    @user.privated! unless @user.privated?
     redirect_to user_path(@user), notice: 'このアカウントを非公開にしました'
   end
 
