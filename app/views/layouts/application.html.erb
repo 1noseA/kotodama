@@ -14,25 +14,21 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <%= favicon_link_tag('favicon.ico') %>
-
+    
   </head>
 
   <body>
-    <div class="loader-wrap">
-      <div class="loader">
-        <%= render 'layouts/header' %>
-        <main>
-          <% flash.each do |type, msg| %>
-            <% type = 'success' if type == 'notice' %>
-            <% type = 'error' if type == 'alert' %>
-            <script>
-              toastr['<%= type %>']('<%= msg %>');
-            </script>
-          <% end %>
-        <%= yield %>
-        </main>
-        <%= render 'layouts/footer' %>
-      </div> 
-    </div>
+    <%= render 'layouts/header' %>
+    <main>
+      <% flash.each do |type, msg| %>
+        <% type = 'success' if type == 'notice' %>
+        <% type = 'error' if type == 'alert' %>
+        <script>
+          toastr['<%= type %>']('<%= msg %>');
+        </script>
+      <% end %>
+    <%= yield %>
+    </main>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
