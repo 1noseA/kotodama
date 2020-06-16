@@ -16,12 +16,11 @@
 - 通知機能
 - twitterシェアボタン
 
-<img width="1422" alt="2" src="https://user-images.githubusercontent.com/59720615/84726291-800e6080-afc7-11ea-97bc-adf76e7a980d.png">
 マイページで自分の投稿した言葉とお気に入りした言葉がスライドで流せます。
+<img width="1422" alt="2" src="https://user-images.githubusercontent.com/59720615/84726291-800e6080-afc7-11ea-97bc-adf76e7a980d.png">
 
-<img width="1427" alt="3" src="https://user-images.githubusercontent.com/59720615/84726295-83a1e780-afc7-11ea-9c8a-835d960873b7.png">
 単語やカテゴリー、言葉にまつわるエピソードで検索できます。
+<img width="1427" alt="3" src="https://user-images.githubusercontent.com/59720615/84726295-83a1e780-afc7-11ea-9c8a-835d960873b7.png">
 
-
-<img width="1419" alt="4" src="https://user-images.githubusercontent.com/59720615/84726300-87ce0500-afc7-11ea-98b7-335ececf2832.png">
 お気に入りやコメント、Twitterでシェアできます。
+<img width="1419" alt="4" src="https://user-images.githubusercontent.com/59720615/84726300-87ce0500-afc7-11ea-98b7-335ececf2832.png">
