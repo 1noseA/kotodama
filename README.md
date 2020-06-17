@@ -2,9 +2,9 @@
 <img width="1427" alt="1" src="https://user-images.githubusercontent.com/59720615/84727264-a46b3c80-afc9-11ea-9190-6914e56cc51a.png">
 
 https://kotodama-nose.herokuapp.com/
-テストユーザー
-- Eメール：1@example.com
-- パスワード：password
+- テストユーザー
+  - Eメール：1@example.com
+  - パスワード：password
 
 ## 概要
 自分が救われた言葉を記録、共有できるアプリケーション。
